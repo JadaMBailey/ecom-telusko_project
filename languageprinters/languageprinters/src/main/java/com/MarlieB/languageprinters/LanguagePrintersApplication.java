@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 
 
 @SpringBootApplication
-
+// Spring-Boot-Application includes Component Scan annotation which will scan within the package [Ln1] and subdirectories
 public class LanguagePrintersApplication implements CommandLineRunner {
 
 	private ColourPrinter colourPrinter;
@@ -23,3 +23,11 @@ public class LanguagePrintersApplication implements CommandLineRunner {
 		// not sure where 'log' comes from
  	}
 }
+/*
+@Component = to the PrinterConfig class where we stored the @Bean methods creating objects of required classes
+Example
+@Bean
+public RedPrinter redPrinter(){
+return new FrenchRedPrinter;
+}
+ */
