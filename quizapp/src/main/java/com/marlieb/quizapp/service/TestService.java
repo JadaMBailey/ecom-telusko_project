@@ -21,4 +21,10 @@ public class TestService {
         // need to pass category in so DAO knows what category type to find
     return testDAO.findByCategory(category);
     }
+
+    public String addQuestion(Test question) {
+       testDAO.save(question);
+        return "success";
+        // confirmation question added through API. However wondering whether it didn't need to return anything #Todo
+    }
 }
