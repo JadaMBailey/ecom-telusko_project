@@ -9,9 +9,8 @@ import java.util.UUID;
 
 @Repository
 public interface QuestionsDAO extends JpaRepository <Questions, UUID>{
-    //
-    public List<Questions> findMainLanguage(String language);
-
+    // Need to fetch the data from database
+    public List<Questions> findByCategory(String category);
 
 }
 

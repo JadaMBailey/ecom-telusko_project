@@ -17,7 +17,8 @@ public class QuestionsService {
         // this findAll() is from the JpaRepository that QuestionsDAO is extending
     }
 
-    public List<Questions> getMainLanguage(String language) {
-    return questionsDAO.findMainLanguage(language);
+    public List<Questions> getCategory(String category) {
+        // need to pass category in so DAO knows what category type to find
+    return questionsDAO.findByCategory(category);
     }
 }

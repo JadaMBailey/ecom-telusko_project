@@ -23,10 +23,11 @@ public class QuestionsController {
 
     }
 
-    @GetMapping ("mainLanguage/{language}")
-    public List<Questions> getMainLanguage(@PathVariable String language)
+    @GetMapping ("mainLanguage/{category}")
+    public List<Questions> getCategory(@PathVariable String category)
     {
-        return questionsService.getMainLanguage(language);
+        // Need to pass the specified category Language to Service class
+        return questionsService.getCategory(category);
     }
 }
 /*
