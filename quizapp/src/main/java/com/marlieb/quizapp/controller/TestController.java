@@ -4,6 +4,7 @@ import com.marlieb.quizapp.Test;
 import com.marlieb.quizapp.service.TestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -23,12 +24,12 @@ public class TestController {
 
     }
 
-//    @GetMapping ("mainLanguage/{category}")
-//    public List<Questions> getCategory(@PathVariable String category)
-//    {
-//        // Need to pass the specified category Language to Service class
-//        return questionsService.getCategory(category);
-//    }
+    @GetMapping ("language/{category}")
+    public List<Test> getCategory(@PathVariable String category)
+    {
+        // Need to pass the specified category Language to Service class
+        return testService.getCategory(category);
+    }
 }
 /*
 ### {language} is linked to @PathVariable : so what ever value is received for {language} will be assigned to the language variable

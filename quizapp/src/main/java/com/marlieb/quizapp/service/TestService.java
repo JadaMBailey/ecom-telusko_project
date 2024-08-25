@@ -17,8 +17,8 @@ public class TestService {
         // this findAll() is from the JpaRepository that QuestionsDAO is extending
     }
 //
-//    public List<Questions> getCategory(String category) {
-//        // need to pass category in so DAO knows what category type to find
-//    return questionsDAO.findByCategory(category);
-//    }
+    public List<Test> getCategory(String category) {
+        // need to pass category in so DAO knows what category type to find
+    return testDAO.findByCategory(category);
+    }
 }

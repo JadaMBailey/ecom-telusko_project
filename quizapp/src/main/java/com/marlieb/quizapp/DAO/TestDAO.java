@@ -10,7 +10,7 @@ import java.util.List;
 @Repository
 public interface TestDAO extends JpaRepository <Test, Integer>{
     // Need to fetch the data from database
-//    public List<Questions> findByCategory(String category);
+    public List<Test> findByCategory(String category);
 
 }
 
