@@ -6,9 +6,9 @@ import lombok.Data;
 import java.util.UUID;
 @Data // this is a Lombok anno that handles 'getters' and 'setters' plus to-string, without writing it out
 @Entity //
-@Table (name = "questions")
+@Table (name = "testing_knowledge")
 
-public class Questions {
+public class Test {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID) // This annotation will generate id, I don't need to set it
     @Column(name = "User_name")

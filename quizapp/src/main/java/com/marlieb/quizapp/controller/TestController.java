@@ -12,23 +12,23 @@ import java.util.List;
 
 @RestController // Responsible to accept request from the user
 @RequestMapping("question")
-public class QuestionsController {
+public class TestController {
     @Autowired // replaces the "new QuestionsService" usually required
     QuestionsService questionsService;
 
-    @GetMapping("allQuestions")
-    public List<Questions> getAllQuestions(){
-        // This is because the service does the work
-        return questionsService.getAllQuestions();
+//    @GetMapping("allQuestions")
+//    public List<Questions> getAllQuestions(){
+//        // This is because the service does the work
+//        return questionsService.getAllQuestions();
+//
+//    }
 
-    }
-
-    @GetMapping ("mainLanguage/{category}")
-    public List<Questions> getCategory(@PathVariable String category)
-    {
-        // Need to pass the specified category Language to Service class
-        return questionsService.getCategory(category);
-    }
+//    @GetMapping ("mainLanguage/{category}")
+//    public List<Questions> getCategory(@PathVariable String category)
+//    {
+//        // Need to pass the specified category Language to Service class
+//        return questionsService.getCategory(category);
+//    }
 }
 /*
 ### {language} is linked to @PathVariable : so what ever value is received for {language} will be assigned to the language variable
