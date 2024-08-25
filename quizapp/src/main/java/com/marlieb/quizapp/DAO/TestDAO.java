@@ -1,15 +1,14 @@
 package com.marlieb.quizapp.DAO;
 
-import com.marlieb.quizapp.Questions;
 import com.marlieb.quizapp.Test;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
-import java.util.UUID;
+
 
 @Repository
-public interface TestDAO extends JpaRepository <Test, UUID>{
+public interface TestDAO extends JpaRepository <Test, Integer>{
     // Need to fetch the data from database
 //    public List<Questions> findByCategory(String category);
 

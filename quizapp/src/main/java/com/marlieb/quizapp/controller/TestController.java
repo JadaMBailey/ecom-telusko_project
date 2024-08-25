@@ -1,27 +1,27 @@
 package com.marlieb.quizapp.controller;
 
-import com.marlieb.quizapp.Questions;
+import com.marlieb.quizapp.Test;
+import com.marlieb.quizapp.service.TestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import com.marlieb.quizapp.service.QuestionsService;
+
 
 import java.util.List;
 
 @RestController // Responsible to accept request from the user
-@RequestMapping("question")
+@RequestMapping("test")
 public class TestController {
     @Autowired // replaces the "new QuestionsService" usually required
-    QuestionsService questionsService;
+    TestService testService;
 
-//    @GetMapping("allQuestions")
-//    public List<Questions> getAllQuestions(){
-//        // This is because the service does the work
-//        return questionsService.getAllQuestions();
-//
-//    }
+    @GetMapping("allTest")
+    public List<Test> getAllTest(){
+        // This is because the service does the work
+        return testService.getAllTest();
+
+    }
 
 //    @GetMapping ("mainLanguage/{category}")
 //    public List<Questions> getCategory(@PathVariable String category)
