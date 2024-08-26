@@ -4,8 +4,9 @@ import com.marlieb.quizapp.Test;
 import com.marlieb.quizapp.service.TestService;
 import org.aspectj.weaver.patterns.TypePatternQuestions;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 
 import java.util.List;
 
@@ -16,22 +17,23 @@ public class TestController {
     TestService testService;
 
     @GetMapping("allTest")
-    public List<Test> getAllTest(){
+    public ResponseEntity<List<Test>> getAllTest(){
         // This is because the service does the work
-        return testService.getAllTest();
-
+        return testService.getAllTest() ;
+        // specify status code - link to understand: https://youtu.be/vlz9ina4Usk?t=3063
     }
 
     @GetMapping ("language/{category}")
-    public List<Test> getCategory(@PathVariable String category)
+    public ResponseEntity<List<Test>> getCategory(@PathVariable String category)
     {
         // Need to pass the specified category Language to Service class
         return testService.getCategory(category);
     }
 
     @PostMapping("add")
-    public String addQuestion(@RequestBody Test question){
+    public ResponseEntity<String> addQuestion(@RequestBody Test question){
        return testService.addQuestion(question);
+       // 201 - 'created'
     }
 
     // @DeleteMapping -> testDao.delete()
