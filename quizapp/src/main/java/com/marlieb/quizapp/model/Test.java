@@ -1,9 +1,8 @@
-package com.marlieb.quizapp;
+package com.marlieb.quizapp.model;
 
 import jakarta.persistence.*;
 import lombok.Data;
 
-import java.util.UUID;
 @Data // this is a Lombok anno that handles 'getters' and 'setters' plus to-string, without writing it out
 @Entity //
 @Table (name = "testing_knowledge")
@@ -26,6 +25,17 @@ public class Test {
     @Column(name = "difficult_level")
     private String difficultyLevel;
     private String category;
+
+    public Test(String questionTitle, String option1, String option2, String option3, String option4, String rightAnswer, String difficultyLevel, String category) {
+        this.questionTitle = questionTitle;
+        this.option1 = option1;
+        this.option2 = option2;
+        this.option3 = option3;
+        this.option4 = option4;
+        this.rightAnswer = rightAnswer;
+        this.difficultyLevel = difficultyLevel;
+        this.category = category;
+    }
 }
 /*
 ### @Data

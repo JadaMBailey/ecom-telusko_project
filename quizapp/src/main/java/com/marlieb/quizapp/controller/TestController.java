@@ -1,8 +1,7 @@
 package com.marlieb.quizapp.controller;
 
-import com.marlieb.quizapp.Test;
+import com.marlieb.quizapp.model.Test;
 import com.marlieb.quizapp.service.TestService;
-import org.aspectj.weaver.patterns.TypePatternQuestions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -17,28 +16,41 @@ public class TestController {
     TestService testService;
 
     @GetMapping("allTest")
-    public ResponseEntity<List<Test>> getAllTest(){
+    public ResponseEntity<List<Test>> getAllTest() {
         // This is because the service does the work
-        return testService.getAllTest() ;
+        return testService.getAllTest();
         // specify status code - link to understand: https://youtu.be/vlz9ina4Usk?t=3063
     }
 
-    @GetMapping ("language/{category}")
-    public ResponseEntity<List<Test>> getCategory(@PathVariable String category)
-    {
+    @GetMapping("language/{category}")
+    public ResponseEntity<List<Test>> getCategory(@PathVariable String category) {
         // Need to pass the specified category Language to Service class
         return testService.getCategory(category);
     }
 
     @PostMapping("add")
-    public ResponseEntity<String> addQuestion(@RequestBody Test question){
-       return testService.addQuestion(question);
-       // 201 - 'created'
+    public ResponseEntity<String> addQuestion(@RequestBody Test question) {
+        return testService.addQuestion(question);
+        // 201 - 'created'
+    }
+
+    @PostMapping("addMultiQuestions")
+    public ResponseEntity<List<Test>> addMultipleTestQ(@RequestBody List<Test> multiQuestion) {
+        List<Test> savedQuestions = testService.addMultipleTestQ(multiQuestion);
+        // Have no idea why error is occurring
+        return new ResponseEntity<>(savedQuestions, HttpStatus.CREATED);
+        // 201 - 'created'
     }
 
     // @DeleteMapping -> testDao.delete()
-   //  @PutMapping // Update mapping -> testDao.save
+    //  @PutMapping // Update mapping -> testDao.save
 
+//    @GetMapping("randomQuestions")
+//    public ResponseEntity<List<Test>> getRandomQuestions(@RequestParam String category, @RequestParam int numQ) {
+//        List<Test> questions = testService.getRandomQuestionsByCategory(category, numQ);
+//        return new ResponseEntity<>(questions, HttpStatus.OK);
+//
+//    }
 }
 /*
 ### {language} is linked to @PathVariable : so what ever value is received for {language} will be assigned to the language variable
