@@ -6,7 +6,8 @@
         http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd"> <!-- bean definitions here -->
 
     <bean id="dev" class = "com.marlieb.Dev" >
-        <property name="laptop" ref="lapObj1"/>
+<!--        <property name="laptop" ref="lapObj1"/>-->
+        <constructor-arg ref="lapObj1"/>
     </bean>
 
     <bean id="lapObj1" class = "com.marlieb.Laptop" >

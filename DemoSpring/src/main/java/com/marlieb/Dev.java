@@ -11,22 +11,22 @@ public class Dev {
         System.out.println("Dev Constructor");
     }
 
-    public Dev(int age){
-        this.age = age;
-        System.out.println("Dev 1 Constructor");
+    public Dev(Laptop laptop){
+        this.laptop = laptop;
+        System.out.println("Dev 1 Constructor with laptop var passed");
     }
 
     public int getAge(){
         return this.age;
     }
 
-    public Laptop getLaptop() {
-        return laptop;
-    }
-
-    public void setLaptop(Laptop laptop) {
-        this.laptop = laptop;
-    }
+//    public Laptop getLaptop() {
+//        return laptop;
+//    }
+//
+//    public void setLaptop(Laptop laptop) {
+//        this.laptop = laptop;
+//    }
 
     public void build(){
         System.out.println("Building something here");
@@ -34,9 +34,9 @@ public class Dev {
     }
 }
 /*
-Setter INJECTION with a Referenced variable :
-1 - Create getter and setter for the laptop variable
-2 - Use a property attribute in spring.xml and
-set the name (refers to variable name and ref (refers to bean name) attrs.
+CONSTRUCTOR INJECTION with a Referenced variable :
+1 - pass in local variable 'laptop' of type 'Laptop' into the 'Dev' constructor
+2 - Use constructor arg attribute in spring.xml and
+set the ref (refers to bean name) attribute.
 3 - use the 'laptop' variable to call a method in Laptop class.
  */
