@@ -6,11 +6,10 @@
         http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd"> <!-- bean definitions here -->
 
     <bean id="dev" class = "com.marlieb.Dev" >
-<constructor-arg name="age" value="20" />
-<!--        <constructor-arg index="0" value="20" />-->
+        <property name="laptop" ref="lapObj1"/>
     </bean>
 
-    <bean id="laptop" class = "com.marlieb.Laptop" >
+    <bean id="lapObj1" class = "com.marlieb.Laptop" >
     </bean>
 
 </beans>

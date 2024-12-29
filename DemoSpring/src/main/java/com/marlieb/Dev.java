@@ -4,7 +4,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class Dev {
-//    private Laptop laptop;
+    private Laptop laptop;
     private int age;
 
     public Dev() {
@@ -20,14 +20,23 @@ public class Dev {
         return this.age;
     }
 
+    public Laptop getLaptop() {
+        return laptop;
+    }
+
+    public void setLaptop(Laptop laptop) {
+        this.laptop = laptop;
+    }
+
     public void build(){
         System.out.println("Building something here");
+        laptop.compile();
     }
 }
 /*
-CONSTRUCTOR INJECTION : Set values of class variables STORED IN Constructor within Spring.xml
-1 - Create a parameterised constructor that takes in a local variable
-2 - Use a constructor- arg attribute in spring.xml and set the value of the associated variable.
-Optional : There is an alternative which is useful for multiple local varaibles being passed in an constructor.
-3 - OUTPUT VIEW : Specify object and call the getter method to the variable within a System.out.println() function.
+Setter INJECTION with a Referenced variable :
+1 - Create getter and setter for the laptop variable
+2 - Use a property attribute in spring.xml and
+set the name (refers to variable name and ref (refers to bean name) attrs.
+3 - use the 'laptop' variable to call a method in Laptop class.
  */

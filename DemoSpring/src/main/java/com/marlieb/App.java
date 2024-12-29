@@ -13,9 +13,10 @@ public class App
         ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
 
         Dev obj = (Dev) context.getBean("dev");
-        Laptop obj1 = (Laptop) context.getBean("laptop");
+//        Laptop obj1 = (Laptop) context.getBean("laptop");
 
-        System.out.println(obj.getAge());
+        obj.build();
+//        System.out.println(obj.getLaptop());
 
     }
 }

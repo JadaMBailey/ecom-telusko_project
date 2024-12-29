@@ -17,7 +17,8 @@ public interface TestDAO extends JpaRepository <Test, Integer>{
     // @Query : Have to specify two things, query & boolean it is 'nativeQuery'
     // To specify a variable you need to put a : symbol
     // Need to research what 'q' refers to in SQL query #Todo
-    @Query(value = "SELECT * FROM test q WHERE q.category=:category ORDER BY RANDOM() LIMIT :numQ", nativeQuery = true)
+    @Query(value = "SELECT test.id, test.question_title, test.category, test.option_1, test.option_2, test.option_3, test.option_4" +
+            "FROM test q WHERE q.category=:category ORDER BY RANDOM() LIMIT :numQ", nativeQuery = true)
     List<Test> findByCategoryOrderByRandomLimitNumQ(String category, int numQ);
 // to understand @Query #Todo : https://www.geeksforgeeks.org/spring-boot-jpa-native-query-with-example/
 }
