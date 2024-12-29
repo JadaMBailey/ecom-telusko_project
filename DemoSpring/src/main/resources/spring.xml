@@ -6,8 +6,8 @@
         http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd"> <!-- bean definitions here -->
 
     <bean id="dev" class = "com.marlieb.Dev" >
-        <property name="age" value="15"/>
-
+<constructor-arg name="age" value="20" />
+<!--        <constructor-arg index="0" value="20" />-->
     </bean>
 
     <bean id="laptop" class = "com.marlieb.Laptop" >
