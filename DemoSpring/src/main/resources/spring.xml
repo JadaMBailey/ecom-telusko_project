@@ -5,12 +5,12 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd"> <!-- bean definitions here -->
 
-    <bean id="dev" class = "com.marlieb.Dev" autowire="byName" >
+    <bean id="dev" class = "com.marlieb.Dev" autowire="byType" >
 <!--        <property name="device" ref="desk1"/>-->
 <!--        <constructor-arg ref="lapObj1"/>-->
     </bean>
 
-    <bean id="device" class = "com.marlieb.Laptop" >
+    <bean id="device" class = "com.marlieb.Laptop" primary="true" >
     </bean>
 
     <bean id="desk1" class="com.marlieb.Desktop" >

@@ -34,9 +34,7 @@ public class Dev {
     }
 }
 /*
-CONSTRUCTOR INJECTION with a Referenced variable :
-1 - pass in local variable 'laptop' of type 'Laptop' into the 'Dev' constructor
-2 - Use constructor arg attribute in spring.xml and
-set the ref (refers to bean name) attribute.
-3 - use the 'laptop' variable to call a method in Laptop class.
+AUTOWIRING with SPRING.XML when interfaces are involved :
+1 - Ensure to use the 'autowire' attr and choose 'byName' which refers to the variable with th specific e class
+2 - ensure the bean id is the same as the variable name
  */
