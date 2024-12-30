@@ -12,7 +12,7 @@ public class App
         // Container is created with this line, #Todo: need to research this concrete class below
         ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
 
-        Dev obj = (Dev) context.getBean("dev");
+        Dev obj = context.getBean(Dev.class);
 //        Laptop obj1 = (Laptop) context.getBean("laptop");
 
         obj.build();

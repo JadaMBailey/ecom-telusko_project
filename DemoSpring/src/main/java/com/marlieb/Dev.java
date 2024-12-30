@@ -2,7 +2,7 @@ package com.marlieb;
 
 import org.springframework.stereotype.Component;
 
-@Component
+
 public class Dev {
     private Computer device;
     private int age;

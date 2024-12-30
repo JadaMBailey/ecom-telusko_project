@@ -10,7 +10,7 @@
 <!--        <constructor-arg ref="lapObj1"/>-->
     </bean>
 
-    <bean id="device" class = "com.marlieb.Laptop" primary="true" >
+    <bean id="lap1" class = "com.marlieb.Laptop" primary="true" >
     </bean>
 
     <bean id="desk1" class="com.marlieb.Desktop" >
