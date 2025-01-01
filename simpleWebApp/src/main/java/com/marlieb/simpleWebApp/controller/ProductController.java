@@ -3,6 +3,7 @@ package com.marlieb.simpleWebApp.controller;
 import com.marlieb.simpleWebApp.model.Product;
 import com.marlieb.simpleWebApp.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -18,7 +19,18 @@ public class ProductController {
 public List<Product> getProducts(){
     return prodService.getProducts();
 }
+
+@RequestMapping("/products/{prodId}")
+// @PathVariable links up to what is inside here {asb..}
+// , which must be the same as the variable name
+public Product getProductById(@PathVariable int prodId){
+        return prodService.getProductById(prodId);
 }
+
+}
+
+
+
 /*
 1 - URL is typed in 'localhost:8080/products'
 2 - Enters into getProducts method which

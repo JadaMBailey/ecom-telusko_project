@@ -21,4 +21,10 @@ public class ProductService {
         return products;
     }
 
+    public Product getProductById(int prodId) {
+        return products.stream()
+                // it is fetching the getProductId method which is hidden by Lombok to check against passed prodId
+                .filter(p -> p.getProductId() == prodId)
+                .findFirst().get();
+    }
 }
