@@ -32,5 +32,10 @@ public Product getProductById(@PathVariable int prodId){
     // Can additionally check using PostMan and choosing the Get function button to see if product was added
         prodService.addProduct(prod);
 }
+// Updating existing product info
+@PutMapping("/products")
+    public void updateProduct(@RequestBody Product prod){
+        prodService.updateProducts(prod);
+}
 
 }

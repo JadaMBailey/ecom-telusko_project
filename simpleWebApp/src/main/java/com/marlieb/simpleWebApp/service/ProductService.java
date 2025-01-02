@@ -32,4 +32,21 @@ public class ProductService {
     public void addProduct(Product prod) {
         products.add(prod);
     }
+
+    public void updateProducts(Product prod) {
+         int index = 0;
+        for (int i = 0; i < products.size(); i++){
+             if(products.get(i).getProductId() == prod.getProductId())
+                 index = i;
+            products.set(index,prod);
+            /*
+            1 - for loop to run through each product
+            2 - conditional statement to check product id is equal to product being updated.
+            3 - If yes the position of the product in the list is now equal to variable 'index'
+            4 - Using the set method, can associate the index with the local variable being passed
+             */
+         }
+
+
+    }
 }
