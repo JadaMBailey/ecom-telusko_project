@@ -6,6 +6,7 @@ import lombok.Data;
 @Data // Bundles @Getter, @Setter, @ToString, @EqualsAndHashCode,@RequiredArgsConstructor
 @AllArgsConstructor
 public class Product {
+
     private int productId;
     private String ProductName;
     private int productPrice;
