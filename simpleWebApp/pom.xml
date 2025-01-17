@@ -52,7 +52,6 @@
 			<version>3.4.1</version>
 			<!-- Version must match parent version in this pox.xml file -->
 		</dependency>
-
 		<dependency>
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
@@ -60,7 +59,6 @@
 			<scope>runtime</scope>
 <!--			Need to research why 'runtime' instead of test-->
 		</dependency>
-
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
