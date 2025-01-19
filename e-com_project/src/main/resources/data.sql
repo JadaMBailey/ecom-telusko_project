@@ -1,0 +1,23 @@
+INSERT INTO product (name, description, brand, price, category, release_date, available, quantity) VALUES
+
+('Smartphone X10', 'Latest 5G smartphone with high-resolution camera', 'TechCorp', 800, 'Smartphone', '2024-11-01', true, 50),
+('Wireless Earbuds Z', 'Noise-canceling Bluetooth earbuds with a 20-hour battery', 'AudioMax', 130, 'Audio', '2024-08-15', true, 75),
+('Smart Watch V2', 'Fitness-focused smartwatch with heart rate monitor', 'FitTrack', 200, 'Wearables', '2024-09-10', true, 40),
+('Gaming Laptop G7', 'High-performance gaming laptop with 16GB RAM', 'HyperTech', 1500, 'Computers', '2024-10-20', true, 30),
+('4K TV UltraVision', '65-inch 4K Smart TV with HDR support', 'Visionary', 900, 'Home Electronics', '2024-12-01', true, 25),
+('Bluetooth Speaker Vibe', 'Portable waterproof Bluetooth speaker with deep bass', 'SoundPro', 60, 'Audio', '2024-06-05', true, 50),
+('Smart Home Hub 3000', 'Smart assistant device for home automation', 'HomeTech', 150, 'Smart Home', '2024-05-18', true, 60),
+('Wireless Mouse Pro', 'Ergonomic wireless mouse with 2000 DPI', 'ErgoWorks', 40, 'Accessories', '2024-07-30', true, 90),
+('Portable Power Bank X', 'Fast-charging portable power bank with 10000mAh', 'PowerPlus', 30, 'Accessories', '2024-08-25', true, 80),
+('Drone Pro Max', '4K camera drone with long flight time', 'SkyTech', 700, 'Gadgets', '2024-10-05', true, 40),
+('VR Headset Ultra', 'Virtual reality headset with 360-degree vision', 'VRPro', 350, 'Wearables', '2024-09-22', true, 55),
+('Electric Scooter Z', 'Eco-friendly electric scooter with 20-mile range', 'GreenRide', 500, 'Transportation', '2024-11-18', true, 35),
+('Smart Thermostat Eco', 'Energy-efficient smart thermostat with voice control', 'ClimateTech', 130, 'Smart Home', '2024-07-01', true, 90),
+('Bluetooth Keyboard M5', 'Compact Bluetooth keyboard with backlight', 'KeyCraft', 50, 'Accessories', '2024-10-10', true, 70),
+('Digital Camera Pro', 'Professional-grade digital camera with 50x zoom', 'PhotoMaster', 1100, 'Gadgets', '2024-09-01', true, 30),
+('Tablet Pro 10', '10-inch tablet with stylus support', 'TechPad', 350, 'Computers', '2024-06-20', true, 60),
+('Smart Light Bulbs Kit', 'Set of 4 smart light bulbs with color-changing feature', 'LightWorks', 100, 'Smart Home', '2024-07-15', true, 40),
+('Air Purifier X', 'HEPA filter air purifier with smart sensors', 'PureAir', 200, 'Home Electronics', '2024-08-10', true, 50),
+('Portable Projector Z', 'Mini portable projector with 1080p resolution', 'ViewPro', 250, 'Gadgets', '2024-11-05', true, 45),
+('Electric Toothbrush Sonic', 'Sonic technology electric toothbrush with 5 cleaning modes', 'CleanTech', 90, 'Health', '2024-09-12', true, 65),
+('Smart Glasses V3', 'Augmented reality smart glasses with built-in speakers', 'VisionTech', 400, 'Wearables', '2024-10-30', true, 20);
