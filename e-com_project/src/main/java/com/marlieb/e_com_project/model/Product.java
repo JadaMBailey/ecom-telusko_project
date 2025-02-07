@@ -32,8 +32,15 @@ public class Product {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy") // It seems to need Capital 'MM' for month
     private Date releaseDate;
 //    @JsonFormat
-    private boolean available;
+    private boolean productAvailable;
 //    @JsonFormat
-    private int quantity;
+    private int stockQuantity;
+
+    private String imageName;
+    private String imageType;
+    @Lob // Annotation used as image will be a large object
+    private byte[] imageDate;
+
+
 
 }

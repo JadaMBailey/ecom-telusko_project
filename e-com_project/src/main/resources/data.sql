@@ -1,4 +1,4 @@
-INSERT INTO product (name, description, brand, price, category, release_date, available, quantity)
+INSERT INTO product (name, description, brand, price, category, release_date, product_available, stock_quantity)
 
 VALUES ('Smartphone X10', 'Latest 5G smartphone with high-resolution camera', 'TechCorp', 800, 'Smartphone', '2024-11-01', true, 50),
 ('Wireless Earbuds Z', 'Noise-canceling Bluetooth earbuds with a 20-hour battery', 'AudioMax', 130, 'Audio', '2024-08-15', true, 75),
