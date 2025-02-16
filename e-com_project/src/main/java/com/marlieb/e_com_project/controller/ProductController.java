@@ -38,7 +38,7 @@ public class ProductController {
 
     }
 
-    @GetMapping("/products/{prodId}")
+    @GetMapping("/product/{prodId}")
     public ResponseEntity<Product> getAProductById(@PathVariable int prodId){
 
         Product product = productService.getAProductById(prodId);
@@ -51,7 +51,7 @@ public class ProductController {
 
     }
 
-    @PostMapping("/products")
+    @PostMapping("/product")
     public ResponseEntity<?> addProduct(@RequestPart Product product, @RequestPart MultipartFile imageFile){
      try {
 
